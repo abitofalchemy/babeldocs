@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage[most]{tcolorbox}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{algorithm}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{algpseudocode}
+
+\SetKwRepeat{Do}{do}{while}%
+\tcbset{
+    frame code={}
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!70,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+    }
+
+\begin{document}
+%\begin{tcolorbox}
+%\textsc{Extra Curricular Achievements}
+%\end{tcolorbox}
+\begin{algorithm}[H]
+  \KwData{this text}
+  \KwResult{how to write algorithm with \LaTeX2e }
+  initialization\;
+  \While{not at end of this document}{
+    read current\;
+    \Repeat{this end condition}{
+      do these things\;
+    }
+    \eIf{understand}{
+      go to next section\;
+      current section becomes this one\;
+    }{
+      go back to the beginning of current section\;
+    }
+    \Do{this end condition}{
+      do these things\;
+    }
+  }
+  \caption{How to write algorithms}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\KwResult{Write here the result }
+ initialization\;
+ \While{While condition}{
+  instructions\;
+  \eIf{condition}{
+   instructions1\;
+   instructions2\;
+   }{
+   instructions3\;
+  }
+ }
+ \caption{How to write algorithms}
+\end{algorithm}
+
+% \begin{algorithm}
+%  \caption{gCompress}
+%
+%     \begin{algorithmic}[1]
+%       \Function{Merge}{$A,p,q,r$}\Comment{Where A - array, p - left, q - middle, r - right}
+%
+%         \State ${n_1} = q - p + 1$
+%         \State ${n_2} = r - q$
+%         \State Let $L[1 \ldots {n_1} + 1]$ and $R[1 \ldots {n_2} + 1]$ be new arrays
+%         \For{$i = 1$ to ${n_1}$}
+%             \State $L[i] = A[p + i - 1]$
+%         \EndFor
+%         \For{$j = 1$ to ${n_2}$}
+%             \State $R[i] = A[q + j]$
+%         \EndFor
+%         \State $L[{n_1} + 1] =  \infty $
+%         \State $R[{n_2} + 1] =  \infty $
+%         \State $i = 1$
+%         \State $j = 1$
+%         \For{$k = p$ to $r$}
+%             \If {$L[i] < R[j]$}
+%                 \State $A[k] = L[i]$
+%                 \State $i = i + 1$
+%             \ElsIf {$L[i] > R[j]$}
+%                 \State $A[k] = R[j]$
+%                 \State $j = j + 1$
+%             \Else
+%                 \State $A[k] = - \infty$ \Comment{We mark the duplicates with the largest negative integer}
+%                 \State $j = j + 1$
+%             \EndIf
+%         \EndFor
+%        \EndFunction
+%
+% \end{algorithmic}
+% \end{algorithm}
+\end{document}
